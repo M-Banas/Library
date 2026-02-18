@@ -1,0 +1,63 @@
+/* Style dla formularzy autentykacji - minimalne nadpisanie Pico CSS */
+.auth-form {
+    max-width: 480px;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+}
+
+.auth-form p,
+.auth-form h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Pico CSS obsługuje inputy automatycznie, tylko małe dostosowania */
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form input[type="email"] {
+    margin-bottom: 0.75rem;
+}
+
+.auth-form label {
+    margin-bottom: 0.5rem;
+}
+
+.auth-form a {
+    display: block;
+    text-align: left;
+    margin: 0.25rem 0 0.75rem 0;
+    font-size: 0.875rem;
+}
+
+/* Pico CSS obsługuje buttony, tylko szerokość */
+.auth-form button {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Wymagania hasła - zmniejszone spacing */
+#password-requirements {
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    background-color: var(--pico-card-background-color);
+    border: 1px solid var(--pico-muted-border-color);
+    border-radius: var(--pico-border-radius);
+    font-size: 0.8rem;
+}
+
+.requirement {
+    margin: 0.15rem 0;
+    font-size: 0.8rem;
+    color: var(--pico-muted-color);
+}
+
+/* Kolory dla walidacji inputów */
+.input-valid {
+    border-color: var(--pico-form-element-valid-border-color) !important;
+}
+
+.input-invalid {
+    border-color: var(--pico-form-element-invalid-border-color) !important;
+}

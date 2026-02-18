@@ -1,0 +1,158 @@
+:root {
+    --pico-spacing: 0.75rem; 
+    --pico-form-element-spacing-vertical: 0.5rem; 
+    --pico-typography-spacing-vertical: 0.75rem; 
+    
+
+    --pico-font-size: 0.875rem; 
+    font-size: 14px;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 2rem;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-logo:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.user-info {
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 0 0.75rem;
+    display: none;
+}
+
+.nav-links button {
+    margin: 0;
+}
+
+#nav_acc,
+#nav_log_out {
+    display: none;
+}
+
+#lista {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: none;
+}
+
+h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+table th, table td {
+    border: none;
+    border-bottom: 1px solid var(--pico-muted-border-color);
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+table th {
+    background-color: transparent;
+    font-weight: 600;
+    border-bottom: 2px solid var(--pico-muted-border-color);
+}
+
+table tbody tr:hover {
+    background-color: var(--pico-table-row-stripped-background-color);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--pico-card-background-color);
+}
+
+table tbody tr:nth-child(even):hover {
+    background-color: var(--pico-table-row-stripped-background-color);
+}
+
+.genre-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--pico-primary-background);
+    color: var(--pico-primary-inverse);
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.genre-badge-list {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+    .genre-badge-list {
+        background-color: #1e3a5f;
+        color: #90caf9;
+    }
+}
+
+.available-icon {
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.unavailable-icon {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+table button {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    margin: 0.125rem;
+}
+
+#insert, #edit {
+    background-color: var(--pico-card-background-color);
+    border: 1px solid var(--pico-muted-border-color);
+    border-radius: var(--pico-border-radius);
+    padding: 1rem;
+    margin: 1rem 0;
+    max-width: 400px;
+}
+
+#insert b, #edit b {
+    font-size: 1rem;
+    color: var(--pico-color);
+}

@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="views/auth.css">
+
+<article class="auth-form">
+    <h2>Register</h2>
+    <form onsubmit="event.preventDefault(); Register();">
+        <label>
+            Name
+            <input type="text" id="register_name" placeholder="Name" required>
+        </label>
+        <label>
+            Last name
+            <input type="text" id="register_lname" placeholder="Last name" required>
+        </label>
+        <label>
+            Email
+            <input type="email" id="register_email" placeholder="Email" required 
+                   oninput="checkEmailFormat(); checkEmailSimilarity();">
+        </label>
+        <label>
+            Confirm Email
+            <input type="email" id="register_email_conf" placeholder="Email" required 
+                   oninput="checkEmailSimilarity()">
+        </label>
+        <label>
+            Password
+            <input type="text" id="register_pass" placeholder="Password" 
+                   autocomplete="off" required 
+                   oninput="checkPasswordStrength(); checkPasswordSimilarity();">
+        </label>
+        <div id="password-requirements">
+            <div id="req-length" class="requirement">✓ Min. 8 characters</div>
+            <div id="req-uppercase" class="requirement">✓ Uppercase letter</div>
+            <div id="req-lowercase" class="requirement">✓ Lowercase letter</div>
+            <div id="req-number" class="requirement">✓ Number</div>
+            <div id="req-special" class="requirement">✓ Special character</div>
+        </div>
+        <label>
+            Confirm Password
+            <input type="text" id="register_pass_conf" placeholder="Password" 
+                   autocomplete="off" required 
+                   oninput="checkPasswordSimilarity()">
+        </label>
+        <button type="submit">Register</button>
+    </form>
+</article>

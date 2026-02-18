@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="views/auth.css">
+
+<article class="auth-form">
+    <h2>Login</h2>
+    <form onsubmit="event.preventDefault(); loginIn();">
+        <label>
+            Email
+            <input  id="login_email" placeholder="email" required>
+        </label>
+        <label>
+            Password
+            <input type="password" id="login_password" placeholder="password" required>
+        </label>
+        <button type="submit">Login</button>
+    </form>
+</article>

@@ -1,0 +1,26 @@
+<div id="mode"></div><br>
+<input type="text" id="book_id" hidden>
+title:<input type="text" id="book_title">
+author:<input type="text" id="book_author">
+genre:<input type="text" id="book_genre">
+Description:<textarea id="book_description">
+</textarea>
+<br>
+<button id="update_book_button" onclick="update_book()">Update</button>
+<button id="add_book_button" onclick="add_book()">Add</button>
+<br><br>
+<div id="copies_ui">
+    Add copies
+    <input type="number" id="book_quantity" min="1">
+    <button onclick="add_copies()">Add</button>
+    <br><br>
+    Manage copies of this book:<br>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>is borrowed?</th>
+            <th>action</th>
+        </tr>
+        <tbody id="admin_copies_list"></tbody>
+    </table>
+</div>

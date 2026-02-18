@@ -1,0 +1,39 @@
+<div class="filters-container" style="margin-bottom: 1.5rem;">
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 1rem; align-items: end;">
+        <label>
+            Search (title/description)
+            <input type="text" id="filter_search" placeholder="Search books..." onkeyup="applyFilters()">
+        </label>
+        <label>
+            Author
+            <select id="filter_author" onchange="applyFilters()">
+                <option value="">All authors</option>
+            </select>
+        </label>
+        <label>
+            Genre
+            <select id="filter_genre" onchange="applyFilters()">
+                <option value="">All genres</option>
+            </select>
+        </label>
+        <label style="margin-bottom: 22px;">
+            &nbsp;
+
+                <input type="checkbox" id="filter_available" onchange="applyFilters()">
+                Show available only
+
+        </label>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Description</th>
+        <th>Available?</th>
+        <th>Actions</th>
+    </tr>
+    <tbody id="admin_books_list"></tbody>
+</table>

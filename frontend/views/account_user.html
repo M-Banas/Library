@@ -1,0 +1,18 @@
+<h3>Your borrowed books</h3>
+<div style="margin-bottom: 1rem;">
+    <label>
+        <input type="checkbox" id="filter_current_loans" onchange="applyLoanFilter()" checked>
+        Show only currently borrowed
+    </label>
+</div>
+<table><tr>
+    <th>loan id</th>
+    <th>title</th>
+    <th>author</th>
+    <th>borrow date</th>
+    <th>return date</th>
+    <th>expected return date</th>
+    <th>action</th>
+</tr>
+<tbody id="user_copies_list"></tbody>
+</table>

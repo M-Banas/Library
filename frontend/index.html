@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="app.js"></script>
+    <script src="views/register.js"></script>
+    <script src="views/login.js"></script>
+    <script src="views/main_book_view.js"></script>
+    <script src="views/book_profile.js"></script>
+    <script src="views/account_admin.js"></script>
+    <script src="views/account_user.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">    
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+
+<body onload="check_if_logged()">
+<main class="container">
+    <nav class="navbar">
+        <a onclick="check_if_logged()" class="nav-logo">Library</a>
+        <div class="nav-links">
+            <span id="nav_user_info" class="user-info"></span>
+            <button id="nav_log" onclick="load_page('login')" class="nav-link">Login In</button>
+            <button id="nav_reg" onclick="load_page('register')" class="nav-link">Register</button>
+            <button id="nav_acc" onclick="redirect()" class="nav-link">Account</button>
+            <button id="nav_log_out" onclick="log_out()" class="nav-link">Log Out</button>
+
+        </div>
+    </nav><br><br>
+    <div id="main">
+    </div>
+</main>    
+</body>
+
+</html>
