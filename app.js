@@ -7,13 +7,13 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 // Import podzielonych modułów
-const userRoutes = require('./modules/user');
-const bookRoutes = require('./modules/book');
-const copyRoutes = require('./modules/copy');
-const borrowRoutes = require('./modules/borrow');
+const userRoutes = require('./backend/modules/user');
+const bookRoutes = require('./backend/modules/book');
+const copyRoutes = require('./backend/modules/copy');
+const borrowRoutes = require('./backend/modules/borrow');
 
 // Routing
 app.use(userRoutes);
@@ -22,6 +22,6 @@ app.use(copyRoutes);
 app.use(borrowRoutes);
 
 // Main
-app.listen(5201, () => {
-    console.log('Server listens on port 5201');
+app.listen(process.env.PORT, () => {
+    console.log('Server listens on port '+ process.env.PORT);
 });

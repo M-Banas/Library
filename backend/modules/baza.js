@@ -2,6 +2,8 @@
 const { Client } = require('pg');
 require('dotenv').config();
 
+
+
 const client = new Client({
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
@@ -9,6 +11,8 @@ const client = new Client({
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
 });
+
+console.log(client);
 
 client.connect()
     .then(() => console.log('Połączono z bazą danych'))

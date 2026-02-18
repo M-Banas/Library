@@ -2,10 +2,10 @@
   "name": "ti-project",
   "version": "1.0.0",
   "description": "Node.js backend with JWT authentication",
-  "main": "backend/backend.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node backend/backend.js",
-    "dev": "nodemon backend/backend.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
